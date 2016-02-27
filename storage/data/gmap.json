@@ -1,5 +1,5 @@
 {
-	"count": 12123,
+	"count": 12,
 	"wifis": [
 		{
 			"id": 1, 
@@ -69,7 +69,7 @@
 			"descricion": "Calle de Cervantes"
 		},
         {
-			"id": 9, 
+			"id": 12, 
 			"latitude": 40.4496661,
 			"longitude": -3.8762424,
 			"descricion": "Hospital Puera de Hierro"
