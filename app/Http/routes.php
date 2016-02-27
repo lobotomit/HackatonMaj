@@ -18,7 +18,7 @@ Route::get('/wifimap', function () {
     return view('wifimap');
 });
 Route::get('/deportes', function () {
-    return view('main');
+    return view('deportes');
 });
 Route::get('/eventos', function () {
     return view('main');

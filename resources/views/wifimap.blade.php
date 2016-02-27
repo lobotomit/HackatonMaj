@@ -2,13 +2,13 @@
 @section('title', 'Hackaton')
 
 @section('content')
-    <h3>A simple example of MarkerClusterer (100 markers)</h3>
-    <p>
-        <a href="?compiled">Compiled</a> |
-        <a href="?">Standard</a> version of the script.
-    </p>
-    <!-- aqui va el mapa -->
-    <div id="map-container"><div id="map"></div></div>
+    <div class="embed-responsive embed-responsive-16by9">
+            <!-- aqui va el mapa -->
+            <div id="map-container"><div id="map"></div></div>
+    </div>
+
+
+
 @endsection
 @section('scripts')
     @include('layouts.scripts')

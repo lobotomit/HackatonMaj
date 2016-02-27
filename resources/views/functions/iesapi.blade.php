@@ -39,7 +39,7 @@
         }
 
         $datos = json_decode($response);
-        var_dump(json_decode($response, true));
+        //var_dump(json_decode($response, true));
         return $datos;
     //var_dump($datos);
     }

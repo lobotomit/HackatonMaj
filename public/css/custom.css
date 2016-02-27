@@ -12,3 +12,17 @@
     width: 600px;
     height: 400px;
 }
+/*css mapa falta añadir clase body.*/
+.embed-responsive .embed-responsive-item, .embed-responsive iframe, .embed-responsive embed, .embed-responsive object{
+    width: 1050px;
+    height: 450px;
+    position:relative;
+    margin: 3em auto 0em;
+
+}
+
+.embed-responsive.embed-responsive-16by9{
+    text-align:center;
+    height: 450px;
+    padding-bottom: 36%;
+}

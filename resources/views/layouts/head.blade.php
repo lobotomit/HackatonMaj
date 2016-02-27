@@ -4,11 +4,11 @@
     <meta charset="utf-8">
     <!--Fuerza determinado renderizado con IE-->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Desarrollo web</title>
-    <meta name="description" content="DS Prueba">
-    <meta name="author" content="Eduardo Reyes">
+    <title>Hackaton - @yield('title')</title>
+    <meta name="description" content="Pagina de prueba Hackaton">
+    <meta name="author" content="Espartanos">
     <!--Titulo de la pagina-->
     <!-- Bootstrap -->
-    <link href="/css/bootstrap.css" rel="stylesheet">
-    <link href="/css/custom.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
 </head>
