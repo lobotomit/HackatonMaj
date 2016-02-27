@@ -12,12 +12,17 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('prueba');
 });
-Route::get('/try', function () {
+Route::get('/wifimap', function () {
+    return view('wifimap');
+});
+Route::get('/deportes', function () {
     return view('main');
 });
-
+Route::get('/eventos', function () {
+    return view('main');
+});
 /*
 |--------------------------------------------------------------------------
 | Application Routes

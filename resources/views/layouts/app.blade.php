@@ -22,6 +22,5 @@
 @include('layouts.footer')
 </body>
 @yield('scripts')
-<script src="https://googlemaps.github.io/js-marker-clusterer/examples/data.json"></script>
 
 </html>
