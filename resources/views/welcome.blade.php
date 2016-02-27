@@ -1,21 +1,37 @@
 <?php
-$url =  "http://url-de-la-peticion.com";
-$valor1 = "hola";
-$valor2 = "adiós";
-//-----------------------------------------------------------------------------------------//
-$parametros_post = 'parametro1='.urlencode($valor1).'&parametro2='.urlencode($valor2);
-//-----------------------------------------------------------------------------------------//
-$sesion = curl_init($url);
-// definir tipo de petición a realizar: POST
-curl_setopt ($sesion, CURLOPT_POST, true);
-// Le pasamos los parámetros definidos anteriormente
-curl_setopt ($sesion, CURLOPT_POSTFIELDS, $parametros_post);
-// sólo queremos que nos devuelva la respuesta
-curl_setopt($sesion, CURLOPT_HEADER, false);
-curl_setopt($sesion, CURLOPT_RETURNTRANSFER, true);
-// ejecutamos la petición
-$respuesta = curl_exec($sesion);
-// cerramos conexión
-curl_close($sesion);
-var_dump($respuesta);
-?>
+
+$curl = curl_init();
+
+curl_setopt_array($curl, array(
+        CURLOPT_PORT => "443",
+        CURLOPT_URL => "https://iescities.com:443/IESCities/api/data/query/268/sql?origin=original",
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_ENCODING => "",
+        CURLOPT_MAXREDIRS => 10,
+        CURLOPT_TIMEOUT => 30,
+        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+        CURLOPT_CUSTOMREQUEST => "POST",
+        CURLOPT_POSTFIELDS => "select * from wifi",
+        CURLOPT_HTTPHEADER => array(
+                "cache-control: no-cache",
+                "postman-token: 1471daf9-329d-e9b4-b144-0383850f4769",
+                "Content-Type: text/plain"
+        ),
+));
+
+$response = curl_exec($curl);
+$err = curl_error($curl);
+
+curl_close($curl);
+
+if ($err) {
+    echo "cURL Error #:" . $err;
+} else {
+    //echo $response;
+}
+
+$datos=json_decode($response);
+var_dump(json_decode($response, true));
+
+//var_dump($datos);
+
